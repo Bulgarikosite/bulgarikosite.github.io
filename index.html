@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
-<link rel="icon" href="bulgariko.png" type="image/png">
+    <link rel="icon" href="bulgariko.png" type="image/png">
 </head>
 <body>
     <header>
@@ -53,7 +53,7 @@
     <section id="download">
         <h2>Download Bulgariko</h2>
         <p>Start browsing smarter today with faster speeds and enhanced privacy features.</p>
-        <a href="#" class="btn">Download Now</a>
+        <a href="BulgarikoInstaller.exe" download class="btn">Download Now</a>
     </section>
 
     <section id="about">
@@ -75,9 +75,11 @@
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
 
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 </html>
