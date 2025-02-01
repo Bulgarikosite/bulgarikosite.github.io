@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulgariko</title>
+    <title>Bulgariko - Firefox-Based Browser with Enhanced Security & UI</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -15,13 +15,14 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#download">Download</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="home">
         <h2>Welcome to Bulgariko</h2>
-        <p>Based on Firefox, Bulgariko brings you the power of an open-source browser with enhanced security, improved performance, and a modern UI designed to make your browsing experience smoother and safer.</p>
+        <p>Built on Firefox for unmatched security, faster browsing, and customizable features.</p>
         <a href="#download" class="btn">Get Started</a>
     </section>
     
@@ -29,27 +30,32 @@
         <h2>Features</h2>
         <div class="features">
             <div class="feature">
-                <i class="fas fa-rocket"></i>
-                <h3>Fast Performance</h3>
-                <p>Bulgariko is built on Firefox's stable foundation and enhanced for faster browsing.</p>
+                <i class="fas fa-shield-alt"></i>
+                <h3>Enhanced Security</h3>
+                <p>Enjoy a safer browsing experience with built-in features designed to protect your privacy.</p>
             </div>
             <div class="feature">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Increased Security</h3>
-                <p>We’ve strengthened security features, including advanced tracking protection and secure browsing options.</p>
+                <i class="fas fa-rocket"></i>
+                <h3>Fast Performance</h3>
+                <p>Browse faster with optimized performance based on the robust Firefox engine.</p>
             </div>
             <div class="feature">
                 <i class="fas fa-paint-brush"></i>
                 <h3>Customizable UI</h3>
-                <p>With improved and user-friendly design elements, you can fully personalize your browser.</p>
+                <p>Tailor your browsing experience with themes, settings, and extensions.</p>
             </div>
         </div>
     </section>
     
     <section id="download">
         <h2>Download Bulgariko</h2>
-        <p>Experience the speed, security, and customization of Bulgariko today.</p>
+        <p>Start browsing smarter today with faster speeds and enhanced privacy features.</p>
         <a href="#" class="btn">Download Now</a>
+    </section>
+
+    <section id="about">
+        <h2>About Bulgariko</h2>
+        <p>Bulgariko is a modern web browser built on Firefox, offering increased security, performance, and a customizable user interface. It's the perfect browser for anyone looking for a faster, safer, and more personal browsing experience.</p>
     </section>
     
     <footer>
@@ -60,6 +66,16 @@
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
+
+    <script>
+        // Menu toggle for mobile devices
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 
