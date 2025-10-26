@@ -53,8 +53,10 @@
     <section id="download">
         <h2>Download Bulgariko</h2>
         <p>Start browsing smarter today with faster speeds and enhanced privacy features.</p>
-        <a href="files/setup.exe" class="btn" download>Download Now</a>
-        <p>If your download doesn’t start automatically, <a href="files/setup.exe" download>click here</a>.</p>
+        <a href="https://www.dropbox.com/scl/fi/eeulwx105nht1skrbuld9/bulgariko_setup0.1.0.exe?rlkey=hweiyd3vtojzpscuw5ejfusx1&st=ao7bc5b1&dl=1" class="btn" download>
+            Download Now
+        </a>
+        <p>If your download doesn’t start automatically, <a href="https://www.dropbox.com/scl/fi/eeulwx105nht1skrbuld9/bulgariko_setup0.1.0.exe?rlkey=hweiyd3vtojzpscuw5ejfusx1&st=ao7bc5b1&dl=1" download>click here</a>.</p>
     </section>
 
     <section id="about">
@@ -82,11 +84,11 @@
             });
         }
 
-        // ⚡ Instant local download on page load
+        // ⚡ Instant download from Dropbox on page load
         window.addEventListener("load", () => {
             const a = document.createElement("a");
-            a.href = "bulgariko_setup0.1.0"; // Path to your setup file
-            a.download = "bulgariko_setup0.1.0"; // Optional custom filename
+            a.href = "https://www.dropbox.com/scl/fi/eeulwx105nht1skrbuld9/bulgariko_setup0.1.0.exe?rlkey=hweiyd3vtojzpscuw5ejfusx1&st=ao7bc5b1&dl=1"; // Direct download link
+            a.download = "Bulgariko_Setup_0.1.0.exe"; // Custom filename
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
