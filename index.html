@@ -84,15 +84,8 @@
             });
         }
 
-        // ⚡ Instant download from Dropbox on page load
-        window.addEventListener("load", () => {
-            const a = document.createElement("a");
-            a.href = "https://www.dropbox.com/scl/fi/eeulwx105nht1skrbuld9/bulgariko_setup0.1.0.exe?rlkey=hweiyd3vtojzpscuw5ejfusx1&st=ao7bc5b1&dl=1"; // Direct download link
-            a.download = "Bulgariko_Setup_0.1.0.exe"; // Custom filename
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        });
+        // ✅ No auto-download on page load
+        // Download happens only when user clicks the button
     </script>
 </body>
 </html>
