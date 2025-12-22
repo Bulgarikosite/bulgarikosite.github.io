@@ -38,7 +38,7 @@ nav {
 }
 
 .logo::after {
-    content: " ❄️";
+    content: "";
     font-size: 16px;
     opacity: 0.7;
 }
