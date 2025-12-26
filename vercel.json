@@ -1,0 +1,13 @@
+{
+  "name": "bulgariko",
+  "version": 2,
+  "public": true,
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "installCommand": "",
+  "env": {},
+  "git": {
+    "deploymentEnabled": true,
+    "autoAlias": true
+  }
+}
