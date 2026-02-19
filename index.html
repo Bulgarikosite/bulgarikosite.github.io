@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulgariko</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="bulgariko.png" type="image/png">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <nav>
             <div class="logo">Bulgariko</div>
+
+            <!-- Mobile hamburger -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
@@ -22,26 +34,33 @@
             </ul>
         </nav>
     </header>
-    
+
+
+    <!-- HOME -->
     <section id="home">
         <h2>Welcome to Bulgariko</h2>
         <p>A modern browser focused on speed, security, and customization.</p>
         <a href="#download" class="btn">Get Started</a>
     </section>
-    
+
+
+    <!-- FEATURES -->
     <section id="features">
         <h2>Features</h2>
+
         <div class="features">
             <div class="feature">
-                <i class="fas fa-shield-alt"></i>
+               i>
                 <h3>Enhanced Security</h3>
                 <p>Advanced protection features help keep your data private and secure while browsing.</p>
             </div>
+
             <div class="feature">
                 <i class="fas fa-rocket"></i>
                 <h3>Fast Performance</h3>
                 <p>Optimized for smooth and responsive browsing, even with multiple tabs open.</p>
             </div>
+
             <div class="feature">
                 <i class="fas fa-paint-brush"></i>
                 <h3>Customizable UI</h3>
@@ -49,47 +68,59 @@
             </div>
         </div>
     </section>
-    
+
+
+    <!-- DOWNLOAD -->
     <section id="download">
         <h2>Download Bulgariko</h2>
         <p>Start browsing smarter today with a clean interface and powerful features.</p>
-        <a href="https://www.dropbox.com/scl/fi/ihdknfhiki39l69fa9t98/Bulgariko-Christmas-Edition.exe?rlkey=f9pn5lrlxa32e0wbkbhtnbggx&st=p38oyygu&dl=1" class="btn" download>
+
+        <a href="https://www.dropbox.com/scl/fi/ihdknfhiki39l69fa9t98/Bulgariko-Christmas-Edition.exe?rlkey=f9pn5lrlxa32e0wbkbhtnbggx&st=p38oyygu&dl=1"
+           class="btn" download>
             Download Now
         </a>
-        <p>If your download doesn’t start automatically, 
-            <a href="https://www.dropbox.com/scl/fi/ihdknfhiki39l69fa9t98/Bulgariko-Christmas-Edition.exe?rlkey=f9pn5lrlxa32e0wbkbhtnbggx&st=p38oyygu&dl=1" download>
+
+        <p>If your download doesn’t start automatically,
+            <a href="https://www.dropbox.com/scl/fi/ihdknfhiki39l69fa9t98/Bulgariko-Christmas-Edition.exe?rlkey=f9pn5lrlxa32e0wbkbhtnbggx&st=p38oyygu&dl=1"
+               download>
                 click here
             </a>.
         </p>
     </section>
 
+
+    <!-- ABOUT -->
     <section id="about">
         <h2>About Bulgariko</h2>
         <p>
-            Bulgariko is a modern web browser designed to deliver a fast, secure, and customizable browsing experience.
-            It focuses on simplicity, performance, and user control.
+            Bulgariko is a modern web browser designed to deliver a fast, secure,
+            and customizable browsing experience. It focuses on simplicity, performance,
+            and user control.
         </p>
     </section>
-    
+
+
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 Bulgariko. All rights reserved.</p>
+
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
-    <script>
-        // Menu toggle for mobile devices
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav');
 
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        }
+    <!-- Mobile menu script -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
     </script>
+
 </body>
 </html>
