@@ -1,4 +1,6 @@
-/* Reset */
+/* ------------------------------ */
+/* Reset & Base Styles            */
+/* ------------------------------ */
 * {
     margin: 0;
     padding: 0;
@@ -6,20 +8,35 @@
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-body {
-    background: #ffffff;
-    color: #202124;
-    line-height: 1.6;
+:root {
+    --bg: #ffffff;
+    --text: #202124;
+    --text-light: #5f6368;
+    --border: #e0e0e0;
+    --primary: #1a73e8;
+    --primary-hover: #185abc;
+    --radius: 12px;
+    --transition: 0.25s ease;
 }
 
-/* Header */
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------ */
+/* Header                         */
+/* ------------------------------ */
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: #fff;
-    border-bottom: 1px solid #e0e0e0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 nav {
@@ -37,118 +54,124 @@ nav {
     letter-spacing: -0.3px;
 }
 
-.logo::after {
-    content: "";
-    font-size: 16px;
-    opacity: 0.7;
-}
-
-/* Nav links */
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 28px;
 }
 
 nav ul a {
     text-decoration: none;
-    color: #5f6368;
-    font-size: 14px;
+    color: var(--text-light);
+    font-size: 15px;
+    transition: color var(--transition);
 }
 
 nav ul a:hover {
-    color: #1a73e8;
+    color: var(--primary);
 }
 
-/* Sections */
+/* ------------------------------ */
+/* Sections                       */
+/* ------------------------------ */
 section {
     max-width: 1000px;
     margin: auto;
-    padding: 120px 24px 80px;
+    padding: 140px 24px 80px;
     text-align: center;
 }
 
 #home {
-    padding-top: 160px;
+    padding-top: 180px;
 }
 
 h2 {
-    font-size: 34px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: 600;
     margin-bottom: 16px;
 }
 
 p {
-    font-size: 16px;
-    color: #5f6368;
+    font-size: 17px;
+    color: var(--text-light);
     max-width: 700px;
-    margin: auto auto 32px;
+    margin: 0 auto 32px;
 }
 
-/* Button */
+/* ------------------------------ */
+/* Buttons                        */
+/* ------------------------------ */
 .btn {
     display: inline-block;
-    padding: 10px 22px;
-    border-radius: 6px;
-    background: #1a73e8;
+    padding: 12px 26px;
+    border-radius: 8px;
+    background: var(--primary);
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     text-decoration: none;
-    transition: box-shadow 0.2s, background 0.2s;
+    transition: background var(--transition), box-shadow var(--transition);
 }
 
 .btn:hover {
-    background: #185abc;
-    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    background: var(--primary-hover);
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
 }
 
-/* Features */
+/* ------------------------------ */
+/* Features Grid                  */
+/* ------------------------------ */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
+    gap: 28px;
+    margin-top: 50px;
 }
 
 .feature {
-    padding: 28px;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
+    padding: 32px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
     background: #fff;
     text-align: left;
-    transition: box-shadow 0.2s;
+    transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .feature:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    transform: translateY(-4px);
 }
 
 .feature i {
-    font-size: 22px;
-    color: #1a73e8;
+    font-size: 24px;
+    color: var(--primary);
     margin-bottom: 14px;
 }
 
 .feature h3 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 19px;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 
-/* Download section */
+/* ------------------------------ */
+/* Download Section               */
+/* ------------------------------ */
 #download a {
     margin-top: 8px;
 }
 
 #download p a {
-    color: #1a73e8;
+    color: var(--primary);
     text-decoration: none;
 }
 
-/* Footer */
+/* ------------------------------ */
+/* Footer                         */
+/* ------------------------------ */
 footer {
-    border-top: 1px solid #e0e0e0;
-    padding: 24px;
+    border-top: 1px solid var(--border);
+    padding: 28px;
     text-align: center;
     font-size: 14px;
     color: #70757a;
@@ -159,22 +182,29 @@ footer {
 }
 
 .social-icons a {
-    margin: 0 8px;
+    margin: 0 10px;
     color: #70757a;
-    font-size: 18px;
+    font-size: 20px;
+    transition: color var(--transition);
 }
 
 .social-icons a:hover {
-    color: #1a73e8;
+    color: var(--primary);
 }
 
-/* Responsive */
+/* ------------------------------ */
+/* Responsive                     */
+/* ------------------------------ */
 @media (max-width: 768px) {
     nav ul {
         display: none;
     }
 
     h2 {
-        font-size: 28px;
+        font-size: 30px;
+    }
+
+    section {
+        padding: 120px 20px 60px;
     }
 }
